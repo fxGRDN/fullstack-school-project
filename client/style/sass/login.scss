@@ -1,0 +1,62 @@
+@use 'var';
+
+.login-page__container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var.$main;
+}
+
+
+.login-module__container {
+    width: 700px;
+    height: 500px;
+    background-color: var.$sec;
+    box-shadow: 0 0 6px var.$sec;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+
+    .input-fields {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        height: 40%;
+
+        .input__container {
+            width: 100%;
+            height: 25%;
+    
+            input {
+                height: 100%;
+                width: 100%;
+                border: 0;
+            }
+            
+        }
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 12%;
+        width: 40%;
+        box-shadow: 0 0 2px var.$third;
+        background-color: var.$third;
+        font-size: 1.2em;
+        cursor: pointer;
+        user-select: none;
+    
+    }
+
+    
+
+}
+

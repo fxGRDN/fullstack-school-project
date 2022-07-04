@@ -1,0 +1,348 @@
+.login-page__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0fbfc;
+}
+
+.login-module__container {
+  width: 700px;
+  height: 500px;
+  background-color: #3d5a80;
+  box-shadow: 0 0 6px #3d5a80;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.login-module__container .input-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 40%;
+}
+.login-module__container .input-fields .input__container {
+  width: 100%;
+  height: 25%;
+}
+.login-module__container .input-fields .input__container input {
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+.login-module__container .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12%;
+  width: 40%;
+  box-shadow: 0 0 2px #98c1d9;
+  background-color: #98c1d9;
+  font-size: 1.2em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.home-page__container {
+  background-color: #e0fbfc;
+  min-height: 100vh;
+}
+.home-page__container .nav-bar__container {
+  display: grid;
+  position: sticky;
+  grid-template-columns: repeat(4, 1fr);
+  height: 80px;
+  background-color: #98c1d9;
+  box-shadow: 0 0 5px #98c1d9;
+}
+.home-page__container .nav-bar__container .comp-link {
+  position: relative;
+  grid-column: auto;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+.home-page__container .nav-bar__container .owners, .home-page__container .nav-bar__container .cars, .home-page__container .nav-bar__container .add {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-page__container .nav-bar__container .comp-link::after {
+  content: " ";
+  position: absolute;
+  height: 2px;
+  bottom: 10px;
+  right: 100%;
+  left: 25%;
+  transition: 0.6s ease;
+  background-color: #e0fbfc;
+}
+.home-page__container .nav-bar__container .comp-link:hover::after {
+  right: 25%;
+}
+.home-page__container .nav-bar__container .user {
+  padding-left: 20px;
+  cursor: default;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.home-page__container .nav-bar__container .user .username, .home-page__container .nav-bar__container .user .logout {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.home-page__container .nav-bar__container .user .username:hover, .home-page__container .nav-bar__container .user .logout:hover {
+  color: gray;
+}
+.home-page__container .nav-bar__container .user::after {
+  content: " ";
+  position: absolute;
+  height: 90%;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  width: 1px;
+  background-color: white;
+}
+
+.settings__container {
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.settings__container .data-input__container {
+  height: 70%;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5em;
+  border: #3d5a80 1px solid;
+}
+.settings__container .data-input__container h3 {
+  width: 100%;
+  text-align: center;
+}
+.settings__container .data-input__container .submit {
+  background-color: #3d5a80;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  cursor: pointer;
+  user-select: none;
+}
+.settings__container .data-input__container select {
+  width: 31%;
+}
+
+.register__container {
+  background-color: #98c1d9;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.register__container .input-fields__container {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.register__container .input-fields__container input {
+  width: 50%;
+  border: none;
+}
+.register__container .buttons__container {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.register__container .buttons__container .register {
+  width: 50%;
+  height: 20%;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #3d5a80;
+  cursor: pointer;
+  user-select: none;
+}
+.register__container .buttons__container .login {
+  text-decoration-line: underline;
+  cursor: pointer;
+  user-select: none;
+}
+.register__container .buttons__container .login:hover {
+  color: gray;
+}
+
+.error-message {
+  position: absolute;
+  z-index: 3;
+  font-size: 0.9em;
+  color: red;
+  animation: fade 3.2s linear 1;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.cars__container {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 15px;
+}
+.cars__container .search_input {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.cars__container .item__container {
+  padding: 10px;
+  display: flex;
+  width: 350px;
+  height: 500px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #98c1d9;
+  border: 1px solid #3d5a80;
+  border-radius: 10px;
+}
+.cars__container .item__container .image__container {
+  object-fit: contain;
+  background-color: white;
+}
+.cars__container .item__container .info__container {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.cars__container .item__container .info__container .actuall-info .brand__span {
+  padding: 3px;
+  font-weight: 500;
+}
+.cars__container .item__container .info__container .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cars__container .item__container .info__container .buttons > * {
+  width: 90px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.cars__container .item__container .info__container .buttons .edit {
+  background-color: #3d5a80;
+}
+.cars__container .item__container .info__container .buttons .delete {
+  background-color: #990000;
+}
+
+.form-all__container {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.form-all__container .dec-line {
+  height: 700px;
+  width: 1px;
+  background-color: #3d5a80;
+}
+.form-all__container .car-form__container .form__wrapper {
+  height: 400px;
+}
+.form-all__container .owner-form__container .form__wrapper {
+  height: 500px;
+}
+.form-all__container .owner-form__container, .form-all__container .car-form__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.form-all__container .button {
+  margin-top: 20px;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #98c1d9;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form__wrapper {
+  width: 300px;
+  border: #3d5a80 1px solid;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.form__wrapper span {
+  display: flex;
+}
+.form__wrapper span select {
+  margin-left: 5px;
+  width: 145px;
+}
+
+span.label {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,16 @@
+
+@use 'login.scss';
+@use 'home.scss';
+@use 'settings.scss';
+@use 'register.scss';
+@use 'cars.scss';
+@use 'add.scss';
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}

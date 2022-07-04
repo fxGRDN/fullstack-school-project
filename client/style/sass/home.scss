@@ -1,0 +1,82 @@
+@use 'var';
+
+.home-page__container {
+
+    background-color: var.$main;
+    min-height: 100vh;
+
+    .nav-bar__container {
+        display: grid;
+        position: sticky;
+        grid-template-columns: repeat(4, 1fr);
+        height: 80px;
+        background-color: var.$third;
+        box-shadow: 0 0 5px var.$third;
+
+        .comp-link {
+            position: relative;
+            grid-column: auto;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .owners, .cars, .add {
+            font-size: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .comp-link::after {
+            content: ' ';
+            position: absolute;
+            height: 2px;
+            bottom: 10px;
+            right: 100%;
+            left: 25%;
+            transition: 0.6s ease;
+            background-color: var.$main;
+        }
+
+        .comp-link:hover::after {
+            right: 25%;
+            
+        }
+
+        .user {
+            padding-left: 20px;
+            cursor: default;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items:flex-start;
+
+            .username, .logout {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            .username:hover, .logout:hover {
+                color: gray;
+            }
+
+        }
+
+        .user::after {
+            content: ' ';
+            position: absolute;
+            height: 90%;
+            top: 5px;
+            bottom: 5px;
+            left: 5px;
+            width: 1px;
+            background-color: white;
+            
+        } 
+    
+
+    
+    }
+
+}

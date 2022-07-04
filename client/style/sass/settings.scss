@@ -1,0 +1,41 @@
+@use 'var';
+
+
+.settings__container {
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+
+    .data-input__container {
+        height: 70%;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5em;
+        border: var.$sec 1px solid;
+
+        h3 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .submit {
+            background-color: var.$sec;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2em;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        select {
+            width: 31%;
+        }
+    }
+}
